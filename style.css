@@ -48,6 +48,27 @@ nav ul li a:hover {
 	background:#fff;
 }
 
+.search-results ul li {
+	line-height:30px;
+}
+
+.search-results ul li a {
+	font-size:30px;
+	color:#222;
+	line-height:30px;
+}
+
+.meta {
+	color:#777;
+	margin:6px 0px;
+}
+
+.meta span {
+	margin-right:26px;
+}
+
+/* CMS STYLES */
+
 .alignright {
 	float:right;
 	margin:0px 0px 8px 8px;
