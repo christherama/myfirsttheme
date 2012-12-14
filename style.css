@@ -12,12 +12,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 body {
 	background-color: #fff; 
-	background-image: 
+	background-image:
+	-webkit-radial-gradient(20px 20px, circle contain, #222 0%, #444 80%, #aaa 96%, transparent 100%),
 	-webkit-linear-gradient(left, transparent, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
 	-webkit-linear-gradient(#f1f2f2 .1em, transparent .1em);
-	background-size: 83px 1.8em;
-	background-repeat:repeat-y,repeat;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	background-position:20px 100px, 0 0, 0 0;
+	background-size:80px 300px, 83px 1.8em, 83px 1.8em;
+	background-repeat:repeat-y,repeat-y,repeat;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	padding:0px 90px; 
 }
 
 #wrapper {
@@ -102,6 +105,42 @@ nav ul li a:hover {
 
 .meta span {
 	margin-right:26px;
+}
+
+.form-comment {
+	font-family:"shadows into light two";
+	margin-top:30px;
+}
+
+.form-comment label {
+	font-weight:bold;
+	font-size:20px;
+	margin-top:8px;
+}
+
+.form-comment h3 {
+	font-size:30px;
+}
+
+.form-comment input[type=text], .form-comment textarea {
+	font-size:20px;
+	line-height:20px;
+	padding:8px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.form-comment input[type=submit] {
+	font-family:"shadows into light two";
+	font-size:20px;
+	background:#222;
+	color:#fff;
+	background-image:-webkit-gradient(linear,0 0,0 100,from(#444),to(#000));
+	display:inline-block;
+	padding:12px;
+}
+
+.form-comment input[type=submit]:hover {
+	background-image:-webkit-gradient(linear,0 0,0 100,from(#555),to(#000));
 }
 
 footer {

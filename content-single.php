@@ -6,6 +6,6 @@
 				<?php the_content() ?>
 			</div>
 		</div>
-		<?php comments_template()?>
+		<?php iheartfood_comment_form()?>
 	<?php endwhile ?>
 <?php endif ?>
