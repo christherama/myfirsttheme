@@ -11,6 +11,6 @@
 				<?php the_content() ?>
 			</div>
 		</div>
-		<?php if(comments_open())iheartfood_comment_form()?>
+		<?php comments_template() ?>
 	<?php endwhile ?>
 <?php endif ?>
