@@ -21,6 +21,7 @@ body {
 	background-repeat:repeat-y,repeat-y,repeat;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding:0px 90px; 
+	background-attachment:fixed;
 }
 
 #wrapper {
@@ -37,6 +38,22 @@ header h1 {
 	font-size:120px;
 	line-height:120px;
 }
+
+header h1 a {
+	-webkit-transition:-webkit-transform 0.5s, color 0.5s;
+	transition:transform 0.5s;
+	display:inline-block;
+	color:#E0321B;
+	line-height:120px;
+}
+
+header h1 a:hover {
+	transform:rotate(360deg);
+	-webkit-transform:rotate(360deg);
+	text-decoration:none;
+	color:#FA6D5A;
+}
+
 
 nav {
 	margin:10px 0px;
@@ -73,19 +90,28 @@ nav ul li a:hover {
 	margin-top:-4px;
 }
 
+nav ul li.current-menu-item a {
+	color:#FFA56E;
+}
+
 #main {
 	padding:0px 30px;
 }
 
-.post h2 {
-	font-family: "HelveticaNeue-CondensedBold";
-	font-size:40px;
+.widget {
+	clear:both;
 }
 
-.post .story-content {
-	font-size:18px;
-	line-height:22px;
-	font-weight:300;
+
+.widget .social a img {
+	display:inline-block;
+	transition:transform 0.3s;
+	-webkit-transition:-webkit-transform 0.3s;
+}
+
+.widget .social a:hover img {
+	transform:rotate(6deg);
+	-webkit-transform:rotate(6deg);
 }
 
 .search-results ul li {
@@ -96,11 +122,14 @@ nav ul li a:hover {
 	font-size:30px;
 	color:#222;
 	line-height:30px;
+	-webkit-transition:background-color 0.3s;
+	transition:background-color 0.3s;
 }
 
 .meta {
-	color:#777;
+	color:#46CF7A;
 	margin:6px 0px;
+	font-size:16px;
 }
 
 .meta span {
@@ -120,6 +149,10 @@ nav ul li a:hover {
 
 .form-comment h3 {
 	font-size:30px;
+	background:#49C969;
+	border:1px solid #B5EBC2;
+	color:#fff;
+	padding:4px 14px;
 }
 
 .form-comment input[type=text], .form-comment textarea {
@@ -146,17 +179,59 @@ nav ul li a:hover {
 footer {
 	border-top:1px solid #ccc;
 	padding-top:4px;
-	color:#ccc;
+	font-size:16px;
+	color:#aaa;
 }
 
 footer a.login {
-	padding:2px 4px;
+	display:inline-block;
+	padding:4px 6px;
 	border-radius:4px;
 }
 
 footer a.login:hover {
-	background:#dedede;
 }
+
+footer a.login i {
+	-webkit-transition:-webkit-transform 1s;
+	transition:transform 1s;
+}
+
+footer a.login:hover i {
+	transform:rotate(360deg);
+	-webkit-transform:rotate(360deg);
+}
+
+/* GENERAL POST/PAGE STYLES */
+.post h2 {
+	font-family: "HelveticaNeue-CondensedBold";
+	font-size:40px;
+}
+
+.post h2 a {
+	display:block;
+	-webkit-transition:color 0.3s;
+	transition:color 0.3s;
+}
+
+.post h2 a:hover {
+	color:#005078;
+	text-decoration:none;
+}
+
+.post .story-content {
+	font-size:18px;
+	line-height:22px;
+	font-weight:300;
+}
+
+.post img {
+	padding:6px;
+	background:#f1f2f2;
+	border-radius:4px;
+	border:1px solid #bbb;
+}
+
 
 /* CMS STYLES */
 

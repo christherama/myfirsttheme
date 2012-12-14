@@ -6,7 +6,7 @@
 	<body>
 		<div id="wrapper">
 			<header>
-				<h1><?php bloginfo('name')?></h1>
+				<h1>I<a href="<?php bloginfo('url')?>">&hearts;</a>Food</h1>
 			</header>
 			<nav id="primary-nav">
 				<?php get_template_part('nav') // includes nav.php ?>
@@ -33,11 +33,14 @@
 							// Include file named content-home.php
 							get_template_part('content','home');
 							
-						} elseif (is_page() || is_single()) {
+						} elseif (is_single()) {
 							
 							// Include file named content-single.php
 							get_template_part('content','single');
+						} elseif (is_page()) {
 							
+							// Include file named content-single.php
+							get_template_part('content','page');
 						} elseif (is_search()) {
 							
 							// Include file named content-search.php
@@ -51,7 +54,7 @@
 					</div>
 					
 					<!-- RIGHT SIDEBAR -->
-					<div class="span3">
+					<div class="span4">
 						<?php get_sidebar() ?>
 					</div>
 				</div>
