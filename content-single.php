@@ -11,6 +11,16 @@
 				<?php the_content() ?>
 			</div>
 		</div>
-		<?php comments_template() ?>
+		<?php if(comments_open()) {
+			comments_number( 'Be the first to comment', 'Somebody is talking about this', 'People are talking about this' );
+			
+			// Display list of comments
+			$comments = get_comments(array('post_id'=>$post->ID));
+			wp_list_comments(null,$comments);
+			
+			// Display comment form
+			iheartfood_comment_form();
+		}
+		?>
 	<?php endwhile ?>
 <?php endif ?>

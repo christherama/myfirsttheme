@@ -245,6 +245,19 @@ footer a.login:hover i {
 	-webkit-transform:rotate(-1deg);
 }
 
+#main .row div {
+	transition:background-color 0.5s;
+	-webkit-transition:background-color 0.5s;
+}
+
+.highlight {
+	background-color:#EDE8B2;
+}
+
+.deleting {
+	background-color:#EDB2B2;
+}
+
 
 /* CMS STYLES */
 
